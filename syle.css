@@ -1,180 +1,184 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
-
-
-*{
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-
+    line-height: 1.6;
+    color: #2b2a2a;
+    background: #43856c;
 }
-
-
-html,
-body {
-	background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    font-family: "Exo", "Playwrite France Moderne";
-    background-image:url(Img/image.png)
-}
-    
-
-h2 {
-	font-size: 1.8rem;
-	text-align: center;
-	text-transform: uppercase;
-	font-weight: 500;
-	padding-bottom: 50px;
-}
-
-h4 {
-	font-size: 1.3rem;
-	text-transform: uppercase;
-	padding-bottom: 20px;
-	font-weight: 500;
-}
-
-p {
-	font-size: 1rem;
-	margin: 10px 0;
-	line-height: 1.7em;
-}
-
-a {
-	text-decoration: none;
-}
-
 
 .container {
-	margin: auto;
-	max-width: 1300px;
-	overflow: auto;
-	padding: 0 20px;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
 }
 
-.large {
-	font-size: 20px;
+header {
+    background: #3c684e;
+    color: #181e38;
+    padding: 1px 0;
+    min-height: 60px;
+    border-bottom: #366853 3px solid;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    animation: slideIn 1s ease-out;
 }
 
-.btn {
-	display: inline-block;
-	font-size: 15px;
-	padding: 15px 40px;
-	letter-spacing: 1px;
+header h1 {
+    text-align: center;
+    margin: 0;
+    font-size: 2em;
+    animation: fadeIn 1.5s ease-out;
 }
 
-.btn-outline {
-	background: transparent;
-	border: 1px solid #fff;
-	color: #fff;
-	text-transform: uppercase;
-	font-weight: 300;
+header p {
+    text-align: center;
+    font-size: 1.2em;
+    margin: 0;
+    animation: fadeIn 1.5s ease-out;
 }
 
-.btn-outline:hover {
-	background: #fff;
-	color: #000;
+header nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
 }
 
-
-#navbar {
-	overflow: auto;
-	padding-top: 20px;
-	padding-bottom: 20px;
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
 }
 
-#navbar a {
-	color: #000;
+header nav ul li a {
+    color: #181e38;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-#navbar .logo {
-	float: left;
-	padding-top: 20px;
+header nav ul li a:hover {
+    color: #76b3a3;
 }
 
-#navbar img {
-	height: 60px;
+section {
+    padding: 20px 0;
+    animation: fadeInUp 1s ease-out;
 }
 
-#navbar ul {
-	list-style: none;
-	float: right;
-}
-
-#navbar ul li {
-	float: left;
-}
-
-#navbar ul li a {
-	display: block;
-	padding: 20px;
+h2 {
+    padding-top: 120px;
 	text-align: center;
+    margin-bottom: 3px;
+    font-size: 2em;
+}
+
+.project {
+    margin-bottom: 40px;
+}
+
+.contact-info {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (min-width: 1366px) {
+    .container {
+        width: 90%;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    header nav ul {
+        padding: 0;
+        text-align: center;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 15px 0;
+    }
+
+    h2 {
+        font-size: 1.5em;
+        padding-top: 100px;
+    }
+
+    .contact-info {
+        font-size: 1em;
+    }
 }
 
 
-#showcase {
-	background: url('/CSS/c8ff935bd4c1-AdobeStock_614906788-4-.avif');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	height: 500px;
-	text-align: center;
-	padding: 100px;
-}
+@media (max-width: 767px) {
+    .container {
+        width: 95%;
+    }
 
-#showcase .btn {
-	margin-top: 250px;
-}
+    header h1 {
+        font-size: 1.2em;
+    }
 
+    header p {
+        font-size: 0.9em;
+    }
 
-#Proyectos {
-	padding: 80px 0;
-}
+    section {
+        padding: 10px 0;
+    }
 
-.Proyectos-row {
-	display: flex;
-}
+    h2 {
+        font-size: 1.2em;
+        padding-top: 80px;
+    }
 
-.Proyectos-row img {
-	width: 100%;
-}
-
-
-#SobreMi {
-	padding: 80px 0;
-	background: #f9f9f9;
-}
-
-.SobreMi-row {
-	display: flex;
-}
-
-.SobreMi-row-Experiencia,
-.SobreMi-row-Mi {
-	width: 50%;
-	padding-left: 50px;
-}
-
-
-#Contacto {
-	padding: 80px 0;
-}
-
-.Contacto-row {
-	display: flex;
-}
-.Contacto-row-icon {
-	width: 33%;
-	text-align: center;
-}
-
-.Contacto-row-icon img {
-	height: 60px;
-}
-
-
-#mainfooter {
-	background: #f9f9f9;
-	text-align: center;
-	padding: 30px;
+    .contact-info {
+        font-size: 0.9em;
+    }
 }
